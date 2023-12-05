@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Sharpie-Variable';
+    src: url('fonts/Sharpie-Variable.woff2') format('woff2'),
+        url('fonts/Sharpie-Variable.woff') format('woff'),
+        url('fonts/Sharpie-Variable.ttf') format('truetype');
+    font-weight: 300 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Sharpie-Light';
+    src: url('fonts/Sharpie-Light.woff2') format('woff2'),
+        url('fonts/Sharpie-Light.woff') format('woff'),
+        url('fonts/Sharpie-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Sharpie-Regular';
+    src: url('fonts/Sharpie-Regular.woff2') format('woff2'),
+        url('fonts/Sharpie-Regular.woff') format('woff'),
+        url('fonts/Sharpie-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Sharpie-Bold';
+    src: url('fonts/Sharpie-Bold.woff2') format('woff2'),
+        url('fonts/Sharpie-Bold.woff') format('woff'),
+        url('fonts/Sharpie-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+    text-align: center;
+    font-size: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+body {
+    background-color: #f2eee9;
+
+    .videoTag {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -99;
+    }
+
+
+    .App {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        height: 100vh;
+
+        h1 {
+            font-family: 'Rocher';
+            font-size: 3rem;
+        }
+    }
+
+    .container {
+        max-width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 3rem;
+        gap: 2rem;
+        justify-content: space-around;
+        background-color: #ffffffcc;
+        padding: 1.5rem;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.32);
+
+        .country-container {}
+
+        img {
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.32);
+            
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+        .modal {
+            position: fixed;
+            z-index: 1000;
+            background-color: red;
+            color: aqua;
+            width: 150px;
+        }
+
+    }
+
+
+}

@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import Continent from "./Continent";
+import Style from "./styles/style.css";
+import Video from "./styles/images/video.mp4";
 
-function App() {
+function FlagApp() {
+  let [showContinent, setShowContinent] = useState(false);
+  let [continent, setContinent] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <video className="videoTag" autoPlay loop muted>
+        <source src={Video} type="video/mp4" />
+      </video>
+      <div className="App">
+        <h1 className="mint">Country Flag Practice Application</h1>
+        <label>Select a continent:</label>
+        <select onChange={(e) => setContinent(e.target.value)}>
+          <option value="asia">Asia</option>
+          <option value="africa">Africa</option>
+          <option value="europe">Europe</option>
+        </select>
+        <button
+          onClick={() => {
+            setShowContinent(!showContinent);
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          {showContinent ? "Reset" : "Show continent"}
+        </button>
+
+        {showContinent && <Continent continent={continent} />}
+      </div>
+    </>
   );
 }
 
-export default App;
+export default FlagApp;
