@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import CountryInfo from "./CountryInfo";
+import Modal from "./Modal";
 
 function Country({ countryData }) {
   console.log(countryData);
-  let [showInfo, setSowInfo] = useState(false);
+  let [showInfo, setSowInfo] = useState(null);
 
   const handleClick = () => {
     setSowInfo(!showInfo);
@@ -18,7 +19,7 @@ function Country({ countryData }) {
         alt=""
         height="100"
       />
-      {showInfo && <CountryInfo countryData={countryData} />}
+      {showInfo && <Modal countryData={countryData} />}
     </>
   );
 }
