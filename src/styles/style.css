@@ -37,8 +37,15 @@
   align-items: center;
   justify-content: center;
 }
+@font-face {
+  font-family: "Dogica";
+  src: url("./fonts/dogica.ttf") format("truetype"), url("./fonts/dogica.otf") format("otf");
+}
 body {
   background-color: #f2eee9;
+  font-family: "Dogica";
+  color: #f2eee9;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.68);
 }
 body .videoTag {
   -o-object-fit: cover;
@@ -61,6 +68,24 @@ body .App h1 {
   font-family: "Rocher";
   font-size: 3rem;
 }
+body .App button {
+  font-family: "Dogica";
+  color: #ecf0f1;
+  font-size: 12px;
+  text-transform: uppercase;
+  background-color: #e67e22;
+  border: 1px solid #f39c12;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 6px 0px #d35400;
+  transition: all 0.1s;
+  margin-top: 50px;
+}
+body .App button:active {
+  box-shadow: 0px 2px 0px #d35400;
+  position: relative;
+  top: 2px;
+}
 body .container {
   max-width: 90%;
   display: flex;
@@ -82,22 +107,11 @@ body .container img:hover {
   cursor: pointer;
 }
 body .container .modal {
+  display: block;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.929), rgba(255, 255, 255, 0.912));
-  /* Fallback styles for unsupported browsers */
-  background: rgba(255, 255, 255, 0.817);
-  /* Fallback background color */
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  /* Fallback box shadow */
-  border-radius: 20px;
+  padding: 2rem;
+  background: rgb(255, 255, 255);
+  color: #383838;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-}
-@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
-  body .container .modal {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-  }
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.32);
 }/*# sourceMappingURL=style.css.map */

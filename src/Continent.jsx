@@ -21,7 +21,7 @@ function Continent({ continent }) {
 
   return (
     <>
-      <p>Chosen continent: {continent}</p>
+      <h6>Chosen continent: {continent}</h6>
       <div className="container">
         {chosenCont &&
           chosenCont.map((country) => {
